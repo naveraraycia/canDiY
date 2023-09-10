@@ -6,13 +6,13 @@ const { PurgeCSSPlugin } = require('purgecss-webpack-plugin')
 const path = require('path')
 const glob = require('glob')
 const ImageMinimizerPlugin = require('image-minimizer-webpack-plugin')
-const CopyPlugin = require('copy-webpack-plugin')
 
 module.exports = merge(common, {
   output: {
     filename: 'js/[name].[contenthash:12].js'
   },
   mode: 'production',
+  devtool: 'source-map',
   optimization: {
     minimize: true,
     minimizer: [
@@ -62,19 +62,20 @@ module.exports = merge(common, {
                     ],
                 ],
             },
-        },
-        generator: [
-          {
-              type: 'asset',
-              preset: "webp",
-              implementation: ImageMinimizerPlugin.imageminGenerate,
-              options: {
-                  plugins: ["imagemin-webp"]
-              },
-          },
-      ]
+        }
     }),
-    ]
+    ],
+    splitChunks: {
+      chunks: 'all',
+      maxSize: Infinity,
+      minSize: 0,
+      cacheGroups: {
+        node_modules: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'node_modules'
+        }
+      }
+    }
   },
   module: {
     rules: [
@@ -123,7 +124,6 @@ module.exports = merge(common, {
         `${path.join(__dirname, '../src')}/**/*`,
         { nodir: true }
       )
-    }),
-    new CopyPlugin({ patterns: ["images/**/*.*"]})
+    })
   ]
 })

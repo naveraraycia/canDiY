@@ -1,0 +1,1 @@
+{"version":3,"file":"js/main.6df2cbc65682.js","mappings":"mBAGAA,QAAQC,IAAI,e","sources":["webpack://candiy/./src/js/index.js"],"sourcesContent":["import '../styles/vendors.scss'\r\nimport '../styles/index.scss'\r\n\r\nconsole.log('Riize Wonbin')\r\n"],"names":["console","log"],"sourceRoot":""}
