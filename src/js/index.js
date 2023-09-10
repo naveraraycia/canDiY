@@ -1,4 +1,9 @@
 import '../styles/vendors.scss'
 import '../styles/index.scss'
 
-console.log('Riize Wonbin')
+
+export function renderApp() {
+  onLoadEventHandler()
+}
+
+console.log('Riize')
