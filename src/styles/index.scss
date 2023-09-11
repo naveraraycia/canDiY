@@ -140,10 +140,43 @@ body {
     color: white;
     font-size: 20px;
     font-weight: 700;
-
   }
-  
- 
+}
+
+// How it works Section
+#how-it-works {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+
+  font-family: $exo;
+
+  h2 {
+    font-weight: 800;
+    // margin-bottom: 2rem;
+  }
+
+  .svg-round {
+    border: solid #72A9C9 4px;
+    border-radius: 100px;
+
+    img {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  .col-md-4 {
+    text-align: center;
+    h3 {
+      margin-top: 2rem;
+      font-weight: 700;
+    }
+
+    p {
+      font-weight: 600;
+      font-size: 18px;
+    }
+  }
 }
 
 
