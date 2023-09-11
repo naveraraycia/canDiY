@@ -1,1 +1,0 @@
-{"version":3,"file":"js/main.53411d822004.js","mappings":"mBAOAA,QAAQC,IAAI,Q","sources":["webpack://candiy/./src/js/index.js"],"sourcesContent":["import '../styles/vendors.scss'\r\nimport '../styles/index.scss'\r\n\r\nexport function renderApp() {\r\n  onLoadEventHandler()\r\n}\r\n\r\nconsole.log('Riize')\r\n"],"names":["console","log"],"sourceRoot":""}

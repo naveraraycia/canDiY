@@ -4,6 +4,7 @@ $bg-color: #FFF3F3;
 
 html {
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -56,7 +57,7 @@ body {
       letter-spacing: 0.5px;
     }
 
-    button {
+    a {
       font-family: $exo;
       font-weight: 600;
       width: fit-content;
@@ -76,8 +77,49 @@ body {
 
 // About Section
 #about {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+
   img {
-    width: 300px;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+
+  .d-sm-none {
+    margin-top: 4rem;
+    img {
+      height: 300px;
+      width: 100%;
+    }
+  }
+
+  .candiy-mission {
+    margin-left: 1rem;
+    font-family: $exo;
+    h1 {
+      font-weight: 800;
+    }
+
+    p {
+      max-width: 500px;
+      letter-spacing: 0.5px;
+      line-height: 150%;
+      font-weight: 600;
+      margin-top: 1rem;
+
+    }
+
+    a {
+      margin-top: 1.75rem;
+
+      &:hover {
+        color: white!important;
+      }
+    }
+
   }
 }
 
@@ -89,6 +131,24 @@ body {
 
 @media screen and (max-width: 1200px) {
   // xl
+
+  #about {
+    img {
+      width: 200px;
+    }
+
+    .col-xl-6:nth-child(2){
+      margin-top: 4rem;
+
+      .candiy-mission {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1048px) {
@@ -109,6 +169,8 @@ body {
 }
 
 @media screen and (max-width: 767px) {
+  // md
+
   #hero-section {
     .hero-description {
       text-align: center;
@@ -128,8 +190,17 @@ body {
     }
 
     .hero-img {
-      height: 300px;
-      margin-top: -100px;
+      height: 350px;
+      margin-top: -2px;
+    }
+  }
+
+  #about {
+    img {
+      width: 100%;
+    }
+    .candiy-mission {
+      margin-left: 0px;
     }
   }
 }
@@ -155,6 +226,25 @@ body {
       }
     }
   }
+
+  #about {
+    .col-xl-6:nth-child(2){
+      margin-top: 2.5rem;
+    }
+
+    .candiy-mission {
+      a {
+        margin-top: 1rem;
+      }
+    }
+
+    .d-sm-none{
+      margin-top: 2.5rem;
+      img {
+        height: 200px;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 376px) {
@@ -167,11 +257,24 @@ body {
       p {
         font-size: 14px;
       }
-      button {
+
+      a {
         padding-left: 80px;
         padding-right: 80px;
         font-size: 12px;
       }
+    }
+  }
+
+  #about {
+    p {
+      font-size: 14px;
+    }
+
+    a {
+      padding-left: 80px;
+      padding-right: 80px;
+      font-size: 12px;
     }
   }
 }
