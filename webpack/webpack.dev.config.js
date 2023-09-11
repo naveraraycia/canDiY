@@ -13,8 +13,6 @@ module.exports = merge(common, {
   devtool: 'eval-source-map',
   devServer: {
     port: 9000,
-    hot: false,
-    liveReload: true,
     static: {
       directory: path.resolve(__dirname, '../dist')
     },

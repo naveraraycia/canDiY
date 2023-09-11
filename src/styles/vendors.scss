@@ -1,1 +1,36 @@
-@import "~bootstrap/scss/bootstrap"
+@import "variables";
+
+$custom-colors: (
+  "light-blue": #97E0EB,
+  "light-orange": #F58F79,
+  "dark-blue": #256285,
+  "darkest-blue": #104D70,
+  "salmon": #FF9797,
+  "light-salmon": #F9CDCD,
+  "lightest-salmon": #FFE5E5,
+  "lighter-blue": #72A9C9,
+  "dark-orange": #DD5536,
+  "lightest-orange": #FFCC9C,
+);
+
+$theme-colors: (
+  "primary": #3E82A8,
+  "secondary": #FF7B55,
+);
+
+// Merge Maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Override Bootstrap Sass variables
+$nav-link-color:$primary;
+$nav-link-font-weight: 800;
+
+$btn-padding-x: 100px;
+$btn-padding-y: 15px;
+$btn-color: white !important;
+$btn-link-color: white !important;
+$btn-link-hover-color: white !important;
+$btn-border-radius: 50px 50px 10px 10px;
+
+
+@import "~bootstrap/scss/bootstrap";
