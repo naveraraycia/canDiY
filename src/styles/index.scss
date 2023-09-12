@@ -179,6 +179,65 @@ body {
   }
 }
 
+// Box Content Section
+#box-content {
+  padding-bottom: 6rem;
+  font-family: $exo;
+
+  img {
+    width: calc(100% - 10%);
+    object-fit: cover;
+    object-position: center;
+    border: 20px white solid;
+  }
+
+  h1 {
+    font-size: 50px;
+    font-weight: 800;
+    width: fit-content;
+    background: linear-gradient(to bottom, transparent 50%, #FFCC9C 50%);
+  }
+
+  
+  .col-md-6 {
+    p {
+      font-family: $varela;
+
+      &:nth-child(2) {
+        font-size: 18px;
+      }
+
+      &:nth-child(3) {
+        max-width: 460px;
+        line-height: 150%;
+      }
+    }
+
+    .candiy-list {
+      .number {
+        font-weight: 900;
+        font-size: 18px;
+        border-radius: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35px;
+        height: 35px;
+        margin-right: 1.5rem;
+      }
+
+      .item {
+        font-weight: 800;
+        font-size: 30px;
+      }
+    }
+
+
+  }
+
+ 
+}
+
 
 
 @media screen and (max-width: 1400px) {
@@ -259,6 +318,29 @@ body {
       margin-left: 0px;
     }
   }
+
+  #box-content {
+    p {
+      &:nth-child(3) {
+        max-width: none!important;
+      }
+    }
+
+    .col-md-6:nth-child(2) {
+      margin-top: 2rem;
+      text-align: center;
+      
+      .brand {
+        display: flex;
+        justify-content: center;
+      }
+
+      .candiy-list {
+        margin-top: 1rem;
+      }
+
+    }
+  }
 }
 
 @media screen and (max-width: 576px) {
@@ -268,11 +350,24 @@ body {
       align-content: center;
     }
   }
+
+  #box-content {
+    .col-md-6 {
+      .candiy-list {
+        .number {
+          font-size: 15px;
+          width: 30px;
+          height: 30px;
+        }
+  
+        .item {
+          font-size: 25px;
+        }
+      }
+    }
+  }
 }
 
-@media screen and (max-width: 575px) {
-  // lower = none
-}
 
 @media screen and (max-width: 420px) {
   #hero-section {
@@ -331,6 +426,59 @@ body {
       padding-left: 80px;
       padding-right: 80px;
       font-size: 12px;
+    }
+  }
+
+  #partners {
+    span {
+      font-size: 14px;
+    }
+  }
+
+  #how-it-works {
+   .col-md-4 {
+    .svg-round {
+      border-width: 3px;
+      padding: 30px!important;
+      
+      img {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    h3 {
+      font-size: 18px;
+    }
+      p {
+        font-size: 14px;
+     }
+   }
+  }
+
+  #box-content {
+    .col-md-6 {
+      p {
+  
+        &:nth-child(2) {
+          font-size: 18px;
+        }
+  
+        &:nth-child(3) {
+          font-size: 14px;
+        }
+      }
+      .candiy-list {
+        .number {
+          font-size: 12px;
+          width: 25px;
+          height: 25px;
+        }
+  
+        .item {
+          font-size: 20px;
+        }
+      }
     }
   }
 }
