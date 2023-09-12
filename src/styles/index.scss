@@ -405,6 +405,31 @@ body {
   }
 }
 
+// Newsletter Section
+#newsletter {
+  background-color: #104D70;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  font-family: $exo;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+
+  button {
+    border-radius: 5px!important;
+    width: fit-content!important;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    margin-left: 1rem;
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 
 
 @media screen and (max-width: 1400px) {
@@ -470,6 +495,13 @@ body {
       a {
         align-self: center;
       }
+    }
+  }
+
+  #newsletter {
+    .col-lg-6:nth-child(1){
+      justify-content: center;
+      margin-bottom: 1rem;
     }
   }
 }
@@ -587,8 +619,29 @@ body {
       }
     }
   }
-}
 
+  #newsletter {
+    p {
+      text-align: center!important;
+    }
+    .col-lg-6:nth-child(2) {
+      .d-flex {
+        flex-direction: column;
+
+        input {
+          padding-top: 15px;
+          padding-bottom: 15px;
+        }
+
+        button {
+          margin-left: 0px!important;
+          margin-top: 0.5rem;
+          width: 100%!important;
+        }
+      }
+    }
+  }
+}
 
 @media screen and (max-width: 420px) {
   #hero-section {
