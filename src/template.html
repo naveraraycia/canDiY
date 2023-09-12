@@ -369,23 +369,66 @@
   </section>
 
   <!-- Newsletter Section -->
-<section id="newsletter">
- <div class="container">
-  <div class="row">
-    <div class="col-lg-6 d-flex align-items-center">
-      <p class="text-white mb-0">Join our newsletter to get updates and deals!</p>
-    </div>
-    <div class="col-lg-6">
-      <div class="d-flex">
-        <input type="text" class="form-control" placeholder="name@example.com">
-        <button type="button" class="btn btn-secondary text-uppercase">submit</button>
-
+  <section id="newsletter">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-6 d-flex align-items-center">
+        <p class="text-white mb-0">Join our newsletter to get updates and deals!</p>
+      </div>
+      <div class="col-lg-6">
+        <div class="d-flex">
+          <input type="text" class="form-control" placeholder="name@example.com">
+          <button type="button" class="btn btn-secondary text-uppercase">submit</button>
+        </div>
       </div>
     </div>
   </div>
- </div>
+    </div>
+  </section>
+
+<!-- Contact Section -->
+<section id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="d-flex flex-column">
+          <input type="text" id="subject" class="form-control" placeholder="Subject">
+          <input type="text" id="email" class="form-control" placeholder="name@example.com">
+          <textarea id="message" cols="30" rows="10" class="form-control" placeholder="Message.."></textarea>
+
+          <button class="btn btn-light-orange text-uppercase">send</button>
+        </div>
+      </div>
+      <div class="col-lg-5">
+        <div class="d-flex contact-detail flex-column">
+          <h1 class="text-light-orange">Contact Us</h1>
+          <p class="text-dark-blue">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <div class="d-flex socials">
+            <a href="https://www.facebook.com/" target="_blank">facebook</a>
+            <a href="https://www.instagram.com/" target="_blank">instagram</a>
+            <a href="https://twitter.com/" target="_blank">twitter</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-3">
+        <div class="logo-candiy mb-4 container">
+          <div class="d-flex justify-content-center">
+            <img src="../images/logo-svg.svg" alt="logo">
+            <div class="d-flex flex-column align-items-center">
+                <h1 class="text-light-orange mb-0">CanDiY</h1>
+                <h4 class="text-primary d-inline-block">subscription box</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<!-- Footer -->
+<footer class="pt-4 pb-4 bg-primary d-flex justify-content-center align-items-center">
+  <p class="text-white">&copy; <span id="year"></span> CanDiY <span class="text-uppercase">rmfn</span></p>
+</footer>
 
 </body>
 </html>

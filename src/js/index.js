@@ -5,4 +5,8 @@ export function renderApp() {
   onLoadEventHandler()
 }
 
-console.log('Riize')
+const yearElement = document.getElementById('year')
+
+const yearToday = new Date().getFullYear()
+
+yearElement.innerHTML = yearToday

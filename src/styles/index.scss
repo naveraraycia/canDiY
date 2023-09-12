@@ -3,7 +3,7 @@
 $bg-color: #FFF3F3;
 
 html {
-  overflow-x: hidden;
+  overflow-x: hidden!important;
   scroll-behavior: smooth;
 }
 
@@ -430,11 +430,97 @@ body {
   }
 }
 
+// Contact Section
+#contact {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  .col-lg-4:nth-child(1) {
+    input {
+      margin-bottom: 0.5rem;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
 
+    textarea {
+      resize: none;
+    }
 
-@media screen and (max-width: 1400px) {
-  // xxl
+    button {
+      margin-top: 0.5rem;
+      border-radius: 5px!important;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .col-lg-5 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .contact-detail {
+      max-width: 400px;
+    }
+
+    h1 {
+      font-family: $exo;
+      font-weight: 800;
+    }
+
+     p {
+      font-family: $varela;
+      letter-spacing: 0.5px;
+      line-height: 150%;
+     }
+
+     .socials {
+      margin-top: 1rem;
+        font-family: $exo;
+
+      a {
+        text-decoration: none;
+        color: #F58F79;
+        font-weight: 800;
+        font-size: 20px;
+        margin-right: 3rem;
+
+        &:hover {
+          color: #DD5536;
+          cursor: pointer;
+          transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          transition-duration: 150ms;
+          transition-delay: 100ms;
+        }
+      }
+     }
+  }
+  
+  .col-lg-3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }
+
+// Footer
+footer {
+  font-family: $exo;
+  font-weight: 800;
+
+  p {
+    font-size: 20px;
+    margin-bottom: 0px!important;
+
+    span:nth-child(2) {
+      font-size: 14px;
+    }
+  }
+}
+
 
 @media screen and (max-width: 1200px) {
   // xl
@@ -502,6 +588,18 @@ body {
     .col-lg-6:nth-child(1){
       justify-content: center;
       margin-bottom: 1rem;
+    }
+  }
+
+  #contact {
+    padding-bottom: 3rem!important;
+    .col-lg-5 {
+      margin-top: 3rem;
+      align-items: start;
+    }
+
+    .col-lg-3 {
+      margin-top: 3rem;
     }
   }
 }
@@ -670,6 +768,18 @@ body {
       }
     }
   }
+
+  #contact {
+    .col-lg-5 {
+      .socials {
+        a {
+          font-size: 16px;
+          margin-right: 1rem;
+
+        }
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 376px) {
@@ -800,6 +910,14 @@ body {
         padding-left: 80px;
         padding-right: 80px;
         font-size: 12px;
+      }
+    }
+  }
+
+  #contact {
+    .col-lg-5 {
+      p {
+        font-size: 14px;
       }
     }
   }
