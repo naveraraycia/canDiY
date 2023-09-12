@@ -593,12 +593,18 @@ footer {
 
   #contact {
     padding-bottom: 3rem!important;
+    .col-lg-4 {
+      order: 2!important;
+    }
+
     .col-lg-5 {
-      margin-top: 3rem;
+      order: 1!important;
+      margin-bottom: 3rem;
       align-items: start;
     }
 
     .col-lg-3 {
+      order: 3!important;
       margin-top: 3rem;
     }
   }
